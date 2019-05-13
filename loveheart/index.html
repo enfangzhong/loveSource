@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>love line with Mrs.Right</title>
+
+<style type="text/css">
+@font-face {
+	font-family: digit;
+	src: url('digital-7_mono.ttf') format("truetype");
+}
+</style>
+
+<link href="css/default.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+
+</head>
+
+<body>
+<!-- <embed src="http://p3qhnc0eg.bkt.clouddn.com/U%20are%20so%20beautiful.mp3" width="0" height="0" loop="-1" autostart="true"> </embed> -->
+<embed src="http://other.web.ri01.sycdn.kuwo.cn/resource/n3/19/68/2405391895.mp3" width="0" height="0" loop="-1" autostart="true"> </embed>
+
+
+<div id="mainDiv">
+	<div id="content">
+		<div id="code">
+        	我很努力的<br />
+            要成为一个</span><br />
+            <span class="keyword">优秀的男朋友</span><br /><br />
+
+            你也很努力的<br />
+            在成为一个<br />
+            <span class="keyword">优秀的女朋友的路上</span><br /><br />
+
+            这种感觉<br />
+            真的是<br />
+             <span class="keyword">太好了</span><br /><br />
+
+            唯有梦想与好姑娘<br />
+            <span class="keyword">不可辜负</span><br /><br />
+
+             <hr />
+   			<span class="keyword">I want to say:</span><br />
+			Mrs.Right<br />
+            <span class="keyword"> I love you! </span><br />
+            -- 钟先森<br />
+
+
+		</div>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					相遇，相识，相恋...
+					<div id="elapseClock"></div>
+				</div>
+<!--			<div id="loveu">
+					<br/>
+					<div class="signature">- 钟先森</div>
+				</div>
+-->
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 55;
+var together = new Date();
+
+together.setFullYear(2018, 5, 1);//1.23；3.29
+together.setHours(12);
+together.setMinutes(0);
+together.setSeconds(0);
+together.setMilliseconds(0);
+
+if (!document.createElement('canvas').getContext) {
+	var msg = document.createElement("div");
+	msg.id = "errorMsg";
+	msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
+	document.body.appendChild(msg);
+	$("#code").css("display", "none")
+	$("#copyright").css("position", "absolute");
+	$("#copyright").css("bottom", "10px");
+	document.execCommand("stop");
+} else {
+	setTimeout(function () {
+		startHeartAnimation();
+	}, 5000);
+
+	timeElapse(together);
+	setInterval(function () {
+		timeElapse(together);
+	}, 500);
+
+	adjustCodePosition();
+	$("#code").typewriter();
+}
+</script>
+<div style="text-align:center;clear:both">
+<p>Made for Mrs.Right, made by <a href="https://github.com/enfangzhong" target="_blank">EnfangZhong<a /></p>
+<p>Copyright © 2017 - 2019. All Rights Reserved. Designed by <a href="https://github.com/enfangzhong" target="_blank">EnfangZhong<a /> </p>
+</div>
+</body>
+</html>
